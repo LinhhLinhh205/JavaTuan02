@@ -8,13 +8,13 @@ package Bai04;
  *
  * @author PC
  */
-public class HinhTru extends HinhTron{
+public class Cylinder extends Circle{
     private double chieuCao;
 
-    public HinhTru() {
+    public Cylinder() {
     }
 
-    public HinhTru(double chieuCao, double banKinh) {
+    public Cylinder(double chieuCao, double banKinh) {
         super(banKinh);
         this.chieuCao = chieuCao;
     }

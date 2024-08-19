@@ -17,7 +17,7 @@ public class Program {
         Scanner sc=new Scanner(System.in);
         System.out.print("Nhap ban kinh hinh Tron: ");
         double bankinh=sc.nextDouble();
-        HinhTron hinhtron=new HinhTron(bankinh);
+        Circle hinhtron=new Circle(bankinh);
         System.out.println("---HINH TRON---");
         System.out.println("Ban kinh: "+hinhtron.getBanKinh());
         System.out.println("Dien tich: "+fm.format(hinhtron.tinhDienTich()));

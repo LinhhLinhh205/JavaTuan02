@@ -11,9 +11,9 @@ import java.util.Scanner;
  *
  * @author PC
  */
-public class QuanLy {
+public class Program {
     
-    public static ArrayList<SanPham> ds = new ArrayList<>();
+    public static ArrayList<Product> ds = new ArrayList<>();
 
     public static void main(String[] args) {
         menu();
@@ -58,7 +58,7 @@ public class QuanLy {
             String ten = sc.nextLine();
             System.out.print("Gia: ");
             double gia = Double.parseDouble(sc.nextLine());
-            ds.add(new SanPham(ten, gia));
+            ds.add(new Product(ten, gia));
             System.out.print("Ban muon tiep tuc? (y/n)");
             String tieptuc = sc.nextLine();
             if (!tieptuc.equalsIgnoreCase("y")) {
@@ -70,7 +70,7 @@ public class QuanLy {
     private static void xuatSapXep() {
         ds.sort((sp1, sp2) -> Double.compare(sp2.getGia(), sp1.getGia()));
         System.out.println("Danh sach san pham sau khi sap xep ");
-        for (SanPham sp : ds) {
+        for (Product sp : ds) {
             System.out.println(sp);
         }
     }
@@ -81,7 +81,7 @@ public class QuanLy {
         String name = sc.nextLine();
         boolean a = false;
         for (int i = 0; i < ds.size(); i++) {
-            SanPham sp = ds.get(i);
+            Product sp = ds.get(i);
             if (sp.getTen().equalsIgnoreCase(name)) {
                 ds.remove(i);
                 a = true;
@@ -99,7 +99,7 @@ public class QuanLy {
     
     private static void xuatTB() {
         double tong = 0;
-        for (SanPham sp : ds) {
+        for (Product sp : ds) {
             tong += sp.getGia();
         }
         double tongTB = tong / ds.size();

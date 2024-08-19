@@ -8,14 +8,14 @@ package Bai04;
  *
  * @author PC
  */
-public class HinhTron {
+public class Circle {
 
     private double banKinh;
 
-    public HinhTron() {
+    public Circle() {
     }
 
-    public HinhTron(double banKinh) {
+    public Circle(double banKinh) {
         this.banKinh = banKinh;
     }
 

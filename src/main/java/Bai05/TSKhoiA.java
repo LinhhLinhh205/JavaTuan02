@@ -8,7 +8,7 @@ package Bai05;
  *
  * @author PC
  */
-public class TSKhoiA extends ThiSinh{
+public class TSKhoiA extends Candidate{
 
     public TSKhoiA(String soBaoDanh, String hoTen, String diaChi, String mucUuTien) {
         super(soBaoDanh, hoTen, diaChi, mucUuTien);

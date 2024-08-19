@@ -8,11 +8,11 @@ package Bai03;
  *
  * @author PC
  */
-public class SanPham {
+public class Product {
     private String ten;
     private double gia;
 
-    public SanPham(String ten, double gia) {
+    public Product(String ten, double gia) {
         this.ten = ten;
         this.gia = gia;
     }
