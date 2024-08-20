@@ -26,17 +26,18 @@ public class Program {
             chon = sc.nextInt();
             switch (chon) {
                 case 1:
-                    System.out.println("Nhap so bao danh: ");
+                    System.out.print("Nhap so bao danh: ");
                     String sobaodanh = sc.nextLine();
-                    System.out.println("Nhap ho ten thi sinh: ");
+                    sc.nextLine();
+                    System.out.print("Nhap ho ten thi sinh: ");
                     String hoten = sc.nextLine();
-                    System.out.println("Nhap dia chi thi sinh: ");
+                    System.out.print("Nhap dia chi thi sinh: ");
                     String diachi = sc.nextLine();
-                    System.out.println("Nhap muc uu tien thi sinh:");
+                    System.out.print("Nhap muc uu tien thi sinh:");
                     String mucuutien = sc.nextLine();
-                    System.out.println("Nhap khoi thi: ");
+                    System.out.print("Nhap khoi thi: ");
                     String khoithi = sc.nextLine();
-
+                  
                     Candidate cd = null;
                     switch (khoithi) {
                         case "A":
@@ -60,11 +61,22 @@ public class Program {
                     System.out.println("Nhap so bao danh can tim: ");
                     String timsoBD=sc.nextLine();
                     
+                    Candidate candi=ad.searchSBD(timsoBD);
+                    if(candi!=null){
+                        candi.hienThiThongTin();
+                    }else{
+                        System.out.println("Khong co thi sinh co so bao danh nay!");
+                    }
+                    
                     break;
-
+                case 4:
+                    System.out.println("Thoat ");
+                    break;
                 default:
-                    throw new AssertionError();
+                    System.out.println("Lua chon khong hop le");
+                    break;
+                    
             }
-        } while (chon != 0);
+        } while (chon != 4);
     }
 }
