@@ -15,12 +15,12 @@ public abstract class Student {
 
     public String getHoTen() {
         return hoTen;
-    }        
+    }
 
     public String getNganh() {
         return nganh;
     }
-    
+
     public Student(String hoTen, String nganh) {
         this.hoTen = hoTen;
         this.nganh = nganh;
@@ -28,7 +28,7 @@ public abstract class Student {
 
     public abstract double getDiem();
 
-    public String getHocLuc() {        
+    public String getHocLuc() {
         double diem = getDiem();
         if (diem < 5) {
             return "Yeu";
@@ -40,21 +40,11 @@ public abstract class Student {
             return "Gioi";
         } else {
             return "Xuat sac";
-        }       
+        }
     }
 
-    public void hienThiThongTin(){
-        System.out.println("Ho ten: "+hoTen);
-        System.out.println("Nghanh: "+nganh);
-        System.out.println("Diem: "+getDiem());
-        System.out.println("Hoc luc: "+getHocLuc());
+    public void xuat() {
+        System.out.println("Ho ten: " + hoTen + ", Nghanh: " + nganh + ", Diem: " + getDiem() + ", Hoc luc: " + getHocLuc());
     }
 
-    @Override
-    public String toString() {
-        return "Student {" + " Ho Ten=" + hoTen + ", Diem: "+getDiem()+" Hoc Luc: "+getHocLuc()+ '}';
-    }
-    
-    
-    
 }
